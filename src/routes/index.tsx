@@ -1,6 +1,12 @@
-import ErrorPage from "pages/error";
-import Home from "pages/home";
-import Menu from "pages/menu";
+import {
+  Appetizer,
+  ChefRecommendation,
+  Desserts,
+  ErrorPage,
+  Home,
+  MainCourse,
+  Menu,
+} from "pages";
 import { createBrowserRouter } from "react-router-dom";
 const routes = createBrowserRouter([
   {
@@ -12,9 +18,22 @@ const routes = createBrowserRouter([
     element: <Menu />,
     children: [
       {
-        path: "/recommendation"
-      }
-    ]
+        path: "/chef-recommendation",
+        element: <ChefRecommendation />,
+      },
+      {
+        path: "/main-course",
+        element: <MainCourse />,
+      },
+      {
+        path: "/appetizer",
+        element: <Appetizer />,
+      },
+      {
+        path: "/desserts",
+        element: <Desserts />,
+      },
+    ],
   },
   {
     path: "*",
