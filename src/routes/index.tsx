@@ -18,19 +18,19 @@ const routes = createBrowserRouter([
     element: <Menu />,
     children: [
       {
-        path: "/chef-recommendation",
+        path: "menu/chef-recommendation",
         element: <ChefRecommendation />,
       },
       {
-        path: "/main-course",
+        path: "menu/main-course",
         element: <MainCourse />,
       },
       {
-        path: "/appetizer",
+        path: "menu/appetizer",
         element: <Appetizer />,
       },
       {
-        path: "/desserts",
+        path: "menu/desserts",
         element: <Desserts />,
       },
     ],
