@@ -1,4 +1,6 @@
+import { MainLayout } from "layout";
+
 const MainCourse = () => {
-  return <div>MainCourse</div>;
+  return <MainLayout>MainCourse</MainLayout>;
 };
 export default MainCourse;

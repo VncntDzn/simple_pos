@@ -1,8 +1,7 @@
+import { MainLayout } from "layout";
 
 const Menu = () => {
-  return <div>Menu</div>;
+  return <MainLayout>Menu</MainLayout>;
 };
-
-Menu.propTypes = {};
 
 export default Menu;

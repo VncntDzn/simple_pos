@@ -1,4 +1,6 @@
+import { MainLayout } from "layout";
+
 const Desserts = () => {
-  return <div>Desserts</div>;
+  return <MainLayout>Desserts</MainLayout>;
 };
 export default Desserts;
