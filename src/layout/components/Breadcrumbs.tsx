@@ -1,4 +1,5 @@
 import { Breadcrumbs as MuiBreadcrumbs, Link, Typography } from "@mui/material";
+
 const Breadcrumbs = () => {
   return (
     <div role="presentation">
@@ -18,7 +19,5 @@ const Breadcrumbs = () => {
     </div>
   );
 };
-
-Breadcrumbs.propTypes = {};
 
 export default Breadcrumbs;
