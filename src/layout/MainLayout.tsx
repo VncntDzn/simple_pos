@@ -1,12 +1,11 @@
+import { Box } from "@mui/material";
 import { ReactNode } from "react";
 
 type MainLayoutProps = {
   children: ReactNode;
 };
 const MainLayout = ({ children }: MainLayoutProps) => {
-  return <div>{children}</div>;
+  return <Box>{children}</Box>;
 };
-
-MainLayout.propTypes = {};
 
 export default MainLayout;
