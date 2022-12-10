@@ -1,20 +1,35 @@
 import { Breadcrumbs as MuiBreadcrumbs, Link, Typography } from "@mui/material";
+import { useState } from "react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Breadcrumbs = () => {
+  const location = useLocation();
+  const [breadcrumb, setBreadcrumb] = useState("");
+
+  useEffect(() => {
+    setBreadcrumb(() => {
+      const pathname = location.pathname;
+      return pathname.substring(1);
+    });
+  }, [location]);
   return (
     <div role="presentation">
       <MuiBreadcrumbs aria-label="breadcrumb">
         <Link underline="hover" color="inherit" href="/">
-          MUI
+          Home
         </Link>
-        <Link
-          underline="hover"
-          color="inherit"
-          href="/material-ui/getting-started/installation/"
+        <Typography
+          onClick={() => console.log(location)}
+          color="text.primary"
+          sx={{
+            "::first-letter": {
+              textTransform: "uppercase",
+            },
+          }}
         >
-          Core
-        </Link>
-        <Typography color="text.primary">Breadcrumbs</Typography>
+          {breadcrumb}
+        </Typography>
       </MuiBreadcrumbs>
     </div>
   );

@@ -1,6 +1,5 @@
-import { MainLayout } from "layout";
 
 const MainCourse = () => {
-  return <MainLayout>MainCourse</MainLayout>;
+  return <>MainCourse</>;
 };
 export default MainCourse;

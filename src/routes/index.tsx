@@ -18,20 +18,24 @@ const routes = createBrowserRouter([
     element: <Menu />,
     children: [
       {
-        path: "menu/chef-recommendation",
+        path: "chef-recommendation",
         element: <ChefRecommendation />,
+        caseSensitive: true,
       },
       {
-        path: "menu/main-course",
+        path: "main-course",
         element: <MainCourse />,
+        caseSensitive: true,
       },
       {
-        path: "menu/appetizer",
+        path: "appetizer",
         element: <Appetizer />,
+        caseSensitive: true,
       },
       {
-        path: "menu/desserts",
+        path: "desserts",
         element: <Desserts />,
+        caseSensitive: true,
       },
     ],
   },

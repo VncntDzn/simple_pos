@@ -1,6 +1,5 @@
-import { MainLayout } from "layout";
 
 const ChefRecommendation = () => {
-  return <MainLayout>ChefRecommendation</MainLayout>;
+  return <>ChefRecommendation</>;
 };
 export default ChefRecommendation;

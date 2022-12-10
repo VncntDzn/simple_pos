@@ -1,6 +1,5 @@
-import { MainLayout } from "layout";
 
 const Appetizer = () => {
-  return <MainLayout>Appetizer</MainLayout>;
+  return <>Appetizer</>;
 };
 export default Appetizer;
