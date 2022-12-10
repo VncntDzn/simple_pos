@@ -1,8 +1,9 @@
-import { CssBaseline } from "@mui/material";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import routes from "routes";
+import theme from "theme";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
@@ -12,7 +13,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <CssBaseline />
-    <RouterProvider router={routes} />
+    <ThemeProvider theme={theme}>
+      <RouterProvider router={routes} />
+    </ThemeProvider>
   </React.StrictMode>
 );
 

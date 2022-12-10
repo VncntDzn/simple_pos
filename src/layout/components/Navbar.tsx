@@ -16,9 +16,9 @@ const Navbar = () => {
                 borderRadius: "5px",
               }}
             >
-              Sp
+              Gc
             </Typography>
-            <Typography>Simple Pos</Typography>
+            <Typography>Garcon</Typography>
           </Box>
           
         </Toolbar>
