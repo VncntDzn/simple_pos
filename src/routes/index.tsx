@@ -7,6 +7,7 @@ import {
   MainCourse,
   Menu,
 } from "pages";
+import Food from "pages/menu/components/shared/Food";
 import { createBrowserRouter } from "react-router-dom";
 const routes = createBrowserRouter([
   {
@@ -35,6 +36,11 @@ const routes = createBrowserRouter([
       {
         path: "desserts",
         element: <Desserts />,
+        caseSensitive: true,
+      },
+      {
+        path: ":food",
+        element: <Food />,
         caseSensitive: true,
       },
     ],
