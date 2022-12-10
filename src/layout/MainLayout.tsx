@@ -11,7 +11,9 @@ const MainLayout = ({ children }: MainLayoutProps) => {
     <Box>
       <Navbar />
       <Breadcrumbs />
-      {children}
+      <Box paddingY={2} paddingX={3}>
+        {children}
+      </Box>
     </Box>
   );
 };
