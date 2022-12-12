@@ -4,26 +4,27 @@ import AppetizerSVG from "./svg/appetizer.svg";
 import DrinksSVG from "./svg/drinks.svg";
 import MainSVG from "./svg/main.svg";
 import { Box, Typography, useTheme } from "@mui/material";
+import { useNavigate, useNavigation } from "react-router-dom";
 const DATA = [
   {
     svg: ChefRecommendationSVG,
     name: "Add All Chef's Recommendation",
-    path: "",
+    path: "chef-recommendation",
   },
   {
     svg: MainSVG,
     name: "Main Course",
-    path: "",
+    path: "main-course",
   },
   {
     svg: AppetizerSVG,
     name: "Appetizer",
-    path: "",
+    path: "appetizer",
   },
   {
     svg: DessertSVG,
     name: "Dessert",
-    path: "",
+    path: "desserts",
   },
   {
     svg: DrinksSVG,
@@ -33,6 +34,10 @@ const DATA = [
 ];
 const Categories = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
+  const handleNavigation = ({ path }: { path: string }) => {
+    navigate(path);
+  };
   return (
     <>
       <Typography variant="h5">Categories</Typography>
@@ -45,7 +50,7 @@ const Categories = () => {
           gap: "1rem",
         }}
       >
-        {DATA.map(({ svg, name }) => (
+        {DATA.map(({ svg, name, path }) => (
           <Box
             sx={{
               backgroundColor: theme.palette.primary.main,
@@ -59,6 +64,7 @@ const Categories = () => {
               borderRadius: "10px",
               cursor: "pointer",
             }}
+            onClick={() => handleNavigation({ path })}
             key={name}
           >
             <Box sx={{ height: { xs: 150, lg: 300 } }}>
