@@ -12,12 +12,12 @@ const DATA = [
   },
   {
     svg: MainSVG,
-    name: "Main Ccourse",
+    name: "Main Course",
     path: "",
   },
   {
     svg: AppetizerSVG,
-    name: "Appettizer",
+    name: "Appetizer",
     path: "",
   },
   {
