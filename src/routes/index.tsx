@@ -9,6 +9,7 @@ import {
   SelectedFood,
   Categories,
 } from "pages";
+import Drinks from "pages/menu/components/drinks";
 import { createBrowserRouter } from "react-router-dom";
 const routes = createBrowserRouter([
   {
@@ -42,6 +43,11 @@ const routes = createBrowserRouter([
       {
         path: "desserts",
         element: <Desserts />,
+        caseSensitive: true,
+      },
+      {
+        path: "drinks",
+        element: <Drinks />,
         caseSensitive: true,
       },
       {

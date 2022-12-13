@@ -8,19 +8,12 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import FoodMenu from "assets/data/menu.json";
-import { useEffect, useState } from "react";
+import { useSearchFood } from "hooks";
 import { useParams } from "react-router-dom";
-import { MenuProps } from "types";
 const SelectedFood = () => {
   const params = useParams();
-  const [food, setFood] = useState<MenuProps>();
   const theme = useTheme();
-  useEffect(() => {
-    if (params.id) {
-      setFood(() => FoodMenu.find(({ id }) => id === Number(params.id)));
-    }
-  }, [params.id]);
+  const { food } = useSearchFood({ id: params.id });
 
   if (!food) return null;
   // display only if data is available

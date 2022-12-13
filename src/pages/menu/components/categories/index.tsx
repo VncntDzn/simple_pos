@@ -29,7 +29,7 @@ const DATA = [
   {
     svg: DrinksSVG,
     name: "Drinks",
-    path: "",
+    path: "drinks",
   },
 ];
 const Categories = () => {

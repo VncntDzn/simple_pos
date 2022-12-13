@@ -1,10 +1,13 @@
-import List from "./components/List";
+import { Typography } from "@mui/material";
+import { useClassifyMenu } from "hooks";
+import ListOfFoods from "../shared/ListOfFoods";
 
 const Appetizer = () => {
+  const { data } = useClassifyMenu({ classification: "Appetizer" });
   return (
     <>
-      Appetizer
-      <List />
+      <Typography>Appetizer</Typography>
+      <ListOfFoods foods={data} />
     </>
   );
 };
