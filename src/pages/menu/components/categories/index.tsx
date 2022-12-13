@@ -1,10 +1,10 @@
-import ChefRecommendationSVG from "./svg/recommend.svg";
-import DessertSVG from "./svg/dessert.svg";
+import { Box, Typography, useTheme } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import AppetizerSVG from "./svg/appetizer.svg";
+import DessertSVG from "./svg/dessert.svg";
 import DrinksSVG from "./svg/drinks.svg";
 import MainSVG from "./svg/main.svg";
-import { Box, Typography, useTheme } from "@mui/material";
-import { useNavigate, useNavigation } from "react-router-dom";
+import ChefRecommendationSVG from "./svg/recommend.svg";
 const DATA = [
   {
     svg: ChefRecommendationSVG,
@@ -35,9 +35,9 @@ const DATA = [
 const Categories = () => {
   const theme = useTheme();
   const navigate = useNavigate();
-  const handleNavigation = ({ path }: { path: string }) => {
-    navigate(path);
-  };
+    const handleNavigation = ({ path }: { path: string }) => {
+      navigate(`${path}`);
+    };
   return (
     <>
       <Typography variant="h5">Categories</Typography>
@@ -55,7 +55,7 @@ const Categories = () => {
             sx={{
               backgroundColor: theme.palette.primary.main,
               height: "15rem",
-              width: { sm: "45vw", md: "48vw" },
+              width: { sm: "45vw", md: "48vw", lg: "47vw" },
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
@@ -75,6 +75,7 @@ const Categories = () => {
           </Box>
         ))}
       </Box>
+     
     </>
   );
 };

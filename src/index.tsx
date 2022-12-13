@@ -1,4 +1,5 @@
 import { CssBaseline, ThemeProvider } from "@mui/material";
+import { FoodProvider } from "context/FoodProvider";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
@@ -13,9 +14,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <CssBaseline />
-    <ThemeProvider theme={theme}>
-      <RouterProvider router={routes} />
-    </ThemeProvider>
+    <FoodProvider>
+      <ThemeProvider theme={theme}>
+        <RouterProvider router={routes} />
+      </ThemeProvider>
+    </FoodProvider>
   </React.StrictMode>
 );
 

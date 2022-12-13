@@ -5,8 +5,9 @@ import {
   ErrorPage,
   Home,
   MainCourse,
-  Menu,
+  Menu
 } from "pages";
+import Categories from "pages/menu/components/categories";
 import Food from "pages/menu/components/shared/Food";
 import { createBrowserRouter } from "react-router-dom";
 const routes = createBrowserRouter([
@@ -18,6 +19,11 @@ const routes = createBrowserRouter([
     path: "menu",
     element: <Menu />,
     children: [
+      {
+        element: <Categories />,
+        caseSensitive: true,
+        index: true
+      },
       {
         path: "chef-recommendation",
         element: <ChefRecommendation />,
