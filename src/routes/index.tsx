@@ -5,10 +5,10 @@ import {
   ErrorPage,
   Home,
   MainCourse,
-  Menu
+  Menu,
+  SelectedFood,
+  Categories,
 } from "pages";
-import Categories from "pages/menu/components/categories";
-import Food from "pages/menu/components/shared/Food";
 import { createBrowserRouter } from "react-router-dom";
 const routes = createBrowserRouter([
   {
@@ -22,7 +22,7 @@ const routes = createBrowserRouter([
       {
         element: <Categories />,
         caseSensitive: true,
-        index: true
+        index: true,
       },
       {
         path: "chef-recommendation",
@@ -45,8 +45,8 @@ const routes = createBrowserRouter([
         caseSensitive: true,
       },
       {
-        path: ":food",
-        element: <Food />,
+        path: ":id",
+        element: <SelectedFood />,
         caseSensitive: true,
       },
     ],

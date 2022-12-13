@@ -4,24 +4,26 @@ import {
   CardContent,
   CardMedia,
   Typography,
-  useTheme,
+  useTheme
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { MenuProps } from "types";
+
 interface ListOfFoodProps {
   foods: MenuProps[];
 }
 const ListOfFoods = ({ foods }: ListOfFoodProps) => {
   const theme = useTheme();
   const navigate = useNavigate();
-  const handleNavigateToFood = () => {
-    navigate("");
+  const handleNavigateToFood = (id: number) => {
+    navigate(`/menu/${id}`);
   };
+ 
   return (
     <Box display="flex" flexWrap="wrap" gap={2}>
       {foods.map(({ id, pictureUrl, name, price }: MenuProps) => (
         <Box
-          onClick={handleNavigateToFood}
+          onClick={() => handleNavigateToFood(id)}
           key={id}
           component={Card}
           sx={{
